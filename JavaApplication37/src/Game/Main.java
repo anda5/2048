@@ -10,13 +10,9 @@ package Game;
  *
  * @author anda
  */
-public class JavaApplication37 {
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
+public class Main {
+    public static void main(String[] args){
+        Game game = new Game();
+        game.printArray();
     }
-    
 }
