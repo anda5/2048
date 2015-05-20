@@ -53,8 +53,8 @@ public class Game {
         gameBoard[x][y] = newNumber;
     }
     
-    public void pushUp(){
-        System.out.println("Pushed .....");
+    public void pushDown(){
+        System.out.println("Pushed down.....");
          boolean aleradyCombined[]= {false,false,false,false};
         for(int j=0;j<4;j++){
             for(int i=2;i>-1;i--){
@@ -89,8 +89,8 @@ public class Game {
         }
     }
         
-        public void pushDown(){
-        System.out.println("Pushed down.....");
+        public void pushUp(){
+        System.out.println("Pushed up.....");
         boolean aleradyCombined[]= {false,false,false,false};
         for(int j=0;j<4;j++){
             for(int i=1;i<4;i++){
@@ -128,7 +128,7 @@ public class Game {
         System.out.println("Pushed left.....");
         boolean aleradyCombined[]= {false,false,false,false};
         for(int i=0;i<4;i++){
-            for(int j=1;i<4;i++){
+            for(int j=1;j<4;j++){
                 if(gameBoard[i][j]!=0){
                     int value = gameBoard[i][j];
                     int y=j-1;
@@ -163,11 +163,11 @@ public class Game {
         System.out.println("Pushed right.....");
         boolean aleradyCombined[]= {false,false,false,false};
         for(int i=0;i<4;i++){
-            for(int j=2;i>-1;i--){
+            for(int j=2;j>-1;j--){
                 if(gameBoard[i][j]!=0){
                     int value = gameBoard[i][j];
                     int y=j+1;
-                    while(y>=3 && gameBoard[i][y]==0){
+                    while(y>3 && gameBoard[i][y]==0){
                        y++;
                     }
                     if(y==4){
