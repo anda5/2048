@@ -22,6 +22,22 @@ public class Main {
            game.printArray();
            game.pushUp();
            game.printArray();
+           
+           game.addNewNumber();
+           game.printArray();
+           game.pushDown();
+           game.printArray();
+           
+           game.addNewNumber();
+           game.printArray();
+           game.pushRight();
+           game.printArray();
+           
+           game.addNewNumber();
+           game.printArray();
+           game.pushLeft();
+           game.printArray();
+           
         }
     }
 }
