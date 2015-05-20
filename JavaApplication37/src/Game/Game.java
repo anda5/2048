@@ -22,6 +22,12 @@ public class Game {
     public Game(){
         gameBoard = new int[4][4];
     }
+    public int[][] getGameBoard(){
+        
+        addNewNumber();
+        addNewNumber();
+        return gameBoard;
+    }
     
     public void printArray(){
         for(int[] x:gameBoard){
@@ -70,8 +76,9 @@ public class Game {
                         gameBoard[i][j]=0;
                     }
                     else if(gameBoard[x][j]!=value){
-                        gameBoard[x-1][j] = value;
                         gameBoard[i][j] =0;
+                        gameBoard[x-1][j] = value;
+                        
                     }
                     else{
                         if(aleradyCombined[x]==true){
@@ -106,8 +113,9 @@ public class Game {
                         gameBoard[i][j]=0;
                     }
                     else if(gameBoard[x][j]!=value){
-                        gameBoard[x+1][j] = value;
                         gameBoard[i][j] =0;
+                        gameBoard[x+1][j] = value;
+                        
                     }
                     else{
                          if(aleradyCombined[x]==true){
@@ -141,8 +149,9 @@ public class Game {
                         gameBoard[i][j]=0;
                     }
                     else if(gameBoard[i][y]!=value){
-                        gameBoard[i][y+1] = value;
                         gameBoard[i][j] =0;
+                        gameBoard[i][y+1] = value;
+                        
                     }
                     else{
                          if(aleradyCombined[y]==true){
@@ -176,8 +185,9 @@ public class Game {
                         gameBoard[i][j]=0;
                     }
                     else if(gameBoard[i][y]!=value){
+                         gameBoard[i][j] =0;
                         gameBoard[i][y-1] = value;
-                        gameBoard[i][j] =0;
+                       
                     }
                     else{
                          if(aleradyCombined[y]==true){
