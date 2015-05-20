@@ -32,8 +32,6 @@ public class Game {
     
     public void addNewNumber(){
  
-   
-    
         ArrayList<Integer> emptySpacesx = new ArrayList<Integer>();
         ArrayList<Integer> emptySpacesy = new ArrayList<Integer>();
         for(int i =0;i<4;i++){
@@ -53,5 +51,35 @@ public class Game {
         int x = emptySpacesx.get(choice);
         int y = emptySpacesy.get(choice);
         gameBoard[x][y] = newNumber;
+    }
+    
+    public void pushUp(){
+        System.out.println("Pushed up.....");
+        for(int j=0;j<4;j++){
+            for(int i=1;i<4;i++){
+                if(gameBoard[i][j]!=0){
+                    int value = gameBoard[i][j];
+                    int x=i-1;
+                    while(x>=0 && gameBoard[x][j]==0){
+                       x--;
+                    }
+                    if(x==-1){
+                        gameBoard[0][j]=value;
+                        gameBoard[i][j]=0;
+                    }
+                    else if(gameBoard[x][j]!=value){
+                        gameBoard[x+1][j] = value;
+                        gameBoard[i][j] =0;
+                    }
+                    else{
+                        gameBoard[x][j]*=2;
+                        gameBoard[i][j]=0;
+                    }
+                }
+                
+            }
+        }
+        
+        
     }
 }
