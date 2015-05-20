@@ -31,8 +31,11 @@ public class Game {
     }
     
     public void addNewNumber(){
-      
+<<<<<<< HEAD
  
+=======
+      
+>>>>>>> babb9742ac38546f414d5e78d4e02fc83b2775b0
         ArrayList<Integer> emptySpacesx = new ArrayList<Integer>();
         ArrayList<Integer> emptySpacesy = new ArrayList<Integer>();
         for(int i =0;i<4;i++){
@@ -54,6 +57,10 @@ public class Game {
         gameBoard[x][y] = newNumber;
     }
     
+<<<<<<< HEAD
+    public void pushUp(){
+        System.out.println("Pushed up.....");
+=======
     public void pushDown(){
         System.out.println("Pushed down.....");
          boolean aleradyCombined[]= {false,false,false,false};
@@ -93,6 +100,7 @@ public class Game {
         public void pushUp(){
         System.out.println("Pushed up.....");
         boolean aleradyCombined[]= {false,false,false,false};
+>>>>>>> babb9742ac38546f414d5e78d4e02fc83b2775b0
         for(int j=0;j<4;j++){
             for(int i=1;i<4;i++){
                 if(gameBoard[i][j]!=0){
@@ -110,6 +118,10 @@ public class Game {
                         gameBoard[i][j] =0;
                     }
                     else{
+<<<<<<< HEAD
+                        gameBoard[x][j]*=2;
+                        gameBoard[i][j]=0;
+=======
                          if(aleradyCombined[x]==true){
                         gameBoard[x+1][j] = value;
                         gameBoard[i][j] =0;
@@ -189,10 +201,16 @@ public class Game {
                         aleradyCombined[y]=true;
                         gameBoard[i][j]=0;
                         }
+>>>>>>> babb9742ac38546f414d5e78d4e02fc83b2775b0
                     }
                 }
                 
             }
         }
+<<<<<<< HEAD
+        
+        
+=======
+>>>>>>> babb9742ac38546f414d5e78d4e02fc83b2775b0
     }
 }

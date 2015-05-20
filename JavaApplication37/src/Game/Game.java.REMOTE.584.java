@@ -32,7 +32,6 @@ public class Game {
     
     public void addNewNumber(){
       
- 
         ArrayList<Integer> emptySpacesx = new ArrayList<Integer>();
         ArrayList<Integer> emptySpacesy = new ArrayList<Integer>();
         for(int i =0;i<4;i++){
